@@ -39,12 +39,12 @@ function check() {
     combinations.forEach(combinations => {
         if(combinations.every(index => moves[player1].indexOf(index) > -1)) {
             winner = 'Winner: Player 1';
-            document.getElementsById("end").setAttribute("visibility", "visible");
+            document.getElementById("win").setAttribute("class", "end");
             document.getElementById("x").innerHTML = 'O';
         }
         if(combinations.every(index => moves[player2].indexOf(index) > -1)) {
             winner = 'Winner: Player 2';
-            document.getElementsById("end").setAttribute("visibility", "visible");
+            document.getElementById("win").setAttribute("class", "end");
             document.getElementById("x").innerHTML = 'X';
         }
     })
